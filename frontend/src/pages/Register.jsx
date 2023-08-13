@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {useNavigate} from 'react-router-dom'
 import { toast } from "react-toastify";
 import { FaUser } from "react-icons/fa";
-import {useSelector, useDispatch} from 'react-redux'
-import {register} from '../features/auth/authSlice'
+import { useSelector, useDispatch } from "react-redux";
+import { register, reset } from "../features/auth/authSlice";
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -14,9 +15,12 @@ function Register() {
 
   const { name, email, password, password2 } = formData;
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
 
-  const {user, isLoading, isSuccess, message} = useSelector(state => state.auth)
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  );
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -24,6 +28,19 @@ function Register() {
       [e.target.name]: e.target.value,
     }));
   };
+
+  useEffect(() => {
+    if(isError) {
+      toast.error(message)
+    }
+
+    //redirect when logged in
+    if(isSuccess || user) {
+      navigate('/')
+    }
+
+    dispatch(reset())
+  }, [isError, isSuccess, user, message, navigate, dispatch])
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -34,10 +51,10 @@ function Register() {
       const userData = {
         name,
         email,
-        password
-      }
+        password,
+      };
 
-      dispatch(register(userData))
+      dispatch(register(userData));
     }
   };
 
@@ -45,7 +62,7 @@ function Register() {
     <>
       <section className="heading">
         <h1>
-          <FaUser /> Register {user}
+          <FaUser /> Register 
         </h1>
         <p>Create an account here</p>
       </section>
