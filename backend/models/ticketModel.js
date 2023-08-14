@@ -11,7 +11,7 @@ const ticketSchema = mongoose.Schema(
     issue: {
       type: String,
       required: [true, "Select an issue"],
-      enum: ['Government Travel Card', 'Voucher', 'Authorizatoin', 'Itinerary', 'Outprocess', 'Inprocess'],
+      enum: ['Government Travel Card', 'Voucher', 'Authorization', 'Itinerary', 'Outprocess', 'Inprocess'],
     },
 
     description: {

@@ -1,18 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {toast} from 'react-toastify'
-import {createTicket, reset} from '../features/tickets/ticketSlice'
+import {createTicket} from '../features/tickets/ticketSlice'
 import BackButton from "../components/BackButton";
 
 function NewTicket() {
   const { user } = useSelector((state) => state.auth);
-  
-
 
   const [name] = useState(user.name);
   const [email] = useState(user.email);
-  const [issue, setIssue] = useState("Voucher");
+  const [issue, setIssue] = useState("");
   const [description, setDescription] = useState('');
 
   const dispatch = useDispatch()
@@ -57,7 +55,8 @@ function NewTicket() {
               value={issue}
               onChange={(e) => setIssue(e.target.value)}
             >
-              <option value="Voucher">Voucher</option>
+              <option value="Voucher">Voucher</option>  
+              <option value="Authorization">Authorization</option>  
               <option value="Government Travel Card">
                 Government Travel Card
               </option>
