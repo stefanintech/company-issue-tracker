@@ -23,10 +23,10 @@ Work in progress.
 ## Examples ⤵️
 Take a look at the other projects that I have in my own portfolio:
 
+**StudioScape:** https://github.com/codewithfan/studioscape
+
 **GitHub Finder:** https://github.com/codewithfan/github-finder
 
 **Feedback Fountain:** https://github.com/codewithfan/feedback-app
 
 **Guam Stargazer Society:** https://github.com/codewithfan/nasa-pod
-
-**Tic Tac Toe:** https://github.com/codewithfan/tic-tac-toe
