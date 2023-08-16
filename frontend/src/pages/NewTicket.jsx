@@ -10,7 +10,7 @@ function NewTicket() {
 
   const [name] = useState(user.name);
   const [email] = useState(user.email);
-  const [issue, setIssue] = useState("");
+  const [issue, setIssue] = useState("Voucher");
   const [description, setDescription] = useState('');
 
   const dispatch = useDispatch()
