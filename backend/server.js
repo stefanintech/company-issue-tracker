@@ -5,8 +5,7 @@ const { errorHandler } = require("./middleware/errorMiddleware");
 const connectDB = require("./config/db");
 const PORT = process.env.PORT || 2000;
 
-// connect to database
-connectDB();
+
 
 const app = express();
 
@@ -23,4 +22,9 @@ app.use("/api/tickets", require("./routes/ticketRoutes"));
 
 app.use(errorHandler);
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+//Connect to the database before listening
+connectDB().then(() => {
+  app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+})
+
+
