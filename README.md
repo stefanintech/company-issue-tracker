@@ -1,5 +1,5 @@
 # <a target="_blank" href="#">The Company Support Desk</a> 💻
-<a href="#" target="_blank"><img src="https://github.com/codewithfan/studioscape/blob/main/src/assets/gif/working-on-it.gif"></a>
+<a href="#" target="_blank"><img src="https://github.com/stefanintech/studioscape/blob/main/src/assets/gif/working-on-it.gif"></a>
 
 The Company Support Desk is a full-stack web application that allows Soldiers to input their issues for all things Defense Travel System related when the program manager is not at the desk.
 
@@ -23,10 +23,10 @@ Work in progress.
 ## Examples ⤵️
 Take a look at the other projects that I have in my own portfolio:
 
-**StudioScape:** https://github.com/codewithfan/studioscape
+**StudioScape:** https://github.com/stefanintech/studioscape
 
-**GitHub Finder:** https://github.com/codewithfan/github-finder
+**GitHub Finder:** https://github.com/stefanintech/github-finder
 
-**Feedback Fountain:** https://github.com/codewithfan/feedback-app
+**Feedback Fountain:** https://github.com/stefanintech/feedback-app
 
-**Guam Stargazer Society:** https://github.com/codewithfan/nasa-pod
+**Guam Stargazer Society:** https://github.com/stefanintech/nasa-pod
